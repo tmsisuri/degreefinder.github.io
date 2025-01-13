@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/degree_finder_styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <title>A/L Subject Selector</title>
+</head>
+<body> 
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <header>
+    <div class="logo">
+      <h1>Path Seekers</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="degree-finder.html">Degree Finder</a></li>
+        <li><a href="job.html">Career Path Finder</a></li>
+        <li><a href="alternative paths.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Unlock Your Future</h1>
+    <p>Explore Degrees with Your A/L Subject Choices</p>
+    <label for="stream">Select Stream:</label>
+    <select id="stream">
+      <option value="" selected>Choose a Stream</option>
+      <option value="physical_science">Physical Science</option>
+      <option value="biological_science">Biological Science</option>
+      <option value="commerce">Commerce</option>
+      <option value="arts">Arts</option>
+      <option value="biosystems_technology">Biosystems Technology</option>
+      <option value="engineering_technology">Engineering Technology</option>
+    </select>
+
+    <div id="subjects-section-1" class="hidden">
+      <label for="subjects-1">Select 1st Subject:</label>
+      <select id="subjects-1"></select>
+    </div>
+    <div id="subjects-section-2" class="hidden">
+      <label for="subjects-2">Select 2nd Subject:</label>
+      <select id="subjects-2"></select>
+    </div>
+    <div id="subjects-section-3" class="hidden">
+      <label for="subjects-3">Select 3rd Subject:</label>
+      <select id="subjects-3"></select>
+    </div>
+
+    <button id="check-combination" class="hidden">Check Courses</button>
+  </div>
+  <div id="result" class="result hidden">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ol id="courses-list"></ol>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Path Seekers | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/degree_finder_script.js"></script>
+
+</body>
+</html>

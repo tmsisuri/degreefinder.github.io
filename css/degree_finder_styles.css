@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* body css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #0b0b10 0%, #1f2833 35%, #45a29e 100%);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    
+}
+
+/* background animation*/
+.box div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 6px solid rgba(255, 255, 255, 0.8)
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+header {
+    background: linear-gradient(135deg, #08035f, #0a0543);
+    color: white;
+    padding: 20px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header .logo h1 {
+    font-size: 32px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin: 0 15px;
+}
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Container styles*/
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: rgba(31, 40, 51, 0.9); /* Transparent dark background */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #66fcf1, 0 0 20px #66fcf1, 0 0 30px #66fcf1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(10px); /* Adds blur effect to the background behind the container */
+    border: 2px solid transparent; /* Keeps the border sharp with the neon effect */
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Dropdowns */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+    color: #162e35;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+select:hover {
+    border-color: #0069d9;
+}
+
+/* Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #45a29e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #66fcf1;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Result Section */
+.result {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    background-color: transparent; /* Match container background for consistency */
+    padding: 15px;
+    overflow: hidden; /* Keeps animation within bounds */
+    backdrop-filter: blur(5px); /* Adds subtle blur effect to background */
+}
+
+/* Ordered List */
+.result ol {
+    position: relative;
+    z-index: 2; /* Ensures text is above animation */
+    color: white;
+    list-style: decimal inside;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.result li {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: white;
+    list-style: decimal inside;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #070d36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+
+/* Media Query for Mobile devices  */
+@media screen and (max-width : 498px) {
+    header {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        background-color: #151f6d;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 12px 0;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background-color: #1b0c48;
+        transform: scale(1.05);
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .result {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    footer {
+        width: 100%;
+        font-size: 14px;
+        padding: 15px;
+        position: relative;
+    } 
+}
